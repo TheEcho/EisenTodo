@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		429181A5CE7015C25A5948DC /* Pods_EisenTodoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8DF94C9E5D44173D208AF4 /* Pods_EisenTodoUITests.framework */; };
+		57C930207FEB27F56A0BD5B9 /* Pods_EisenTodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8290A2B262634D15966D73B /* Pods_EisenTodoTests.framework */; };
 		A25B81A42066BDBB00C3CB3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B81A32066BDBB00C3CB3F /* AppDelegate.swift */; };
-		A25B81A62066BDBB00C3CB3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B81A52066BDBB00C3CB3F /* ViewController.swift */; };
+		A25B81A62066BDBB00C3CB3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B81A52066BDBB00C3CB3F /* LoginViewController.swift */; };
 		A25B81A92066BDBB00C3CB3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B81A72066BDBB00C3CB3F /* Main.storyboard */; };
 		A25B81AB2066BDBB00C3CB3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25B81AA2066BDBB00C3CB3F /* Assets.xcassets */; };
 		A25B81AE2066BDBB00C3CB3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B81AC2066BDBB00C3CB3F /* LaunchScreen.storyboard */; };
 		A25B81B92066BDBB00C3CB3F /* EisenTodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B81B82066BDBB00C3CB3F /* EisenTodoTests.swift */; };
 		A25B81C42066BDBB00C3CB3F /* EisenTodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B81C32066BDBB00C3CB3F /* EisenTodoUITests.swift */; };
+		FAF7C5CD2066C8BF00991F07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAF7C5CC2066C8BF00991F07 /* GoogleService-Info.plist */; };
+		FAF7C5EA2072517200991F07 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7C5E92072517200991F07 /* MainViewController.swift */; };
+		FF27BE62B0B5342B7BAB7E61 /* Pods_EisenTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673A7179F2E5A8BA83B31CAE /* Pods_EisenTodo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +39,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A25B81A02066BDBB00C3CB3F /* EisenTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EisenTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27689022B4F792169E6B5CA1 /* Pods-EisenTodoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EisenTodoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EisenTodoTests/Pods-EisenTodoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C4304DA75C17EB65953761C /* Pods-EisenTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EisenTodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EisenTodo/Pods-EisenTodo.release.xcconfig"; sourceTree = "<group>"; };
+		3C8DF94C9E5D44173D208AF4 /* Pods_EisenTodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EisenTodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5576C14C8BA16EC78B553C2E /* Pods-EisenTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EisenTodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EisenTodo/Pods-EisenTodo.debug.xcconfig"; sourceTree = "<group>"; };
+		673A65329354C81D978E50BD /* Pods-EisenTodoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EisenTodoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EisenTodoUITests/Pods-EisenTodoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		673A7179F2E5A8BA83B31CAE /* Pods_EisenTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EisenTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81F483DDED75522251143E90 /* Pods-EisenTodoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EisenTodoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EisenTodoUITests/Pods-EisenTodoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A1ACEECD99D0F14E9334557B /* Pods-EisenTodoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EisenTodoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EisenTodoTests/Pods-EisenTodoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A25B81A32066BDBB00C3CB3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A25B81A52066BDBB00C3CB3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A25B81A52066BDBB00C3CB3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A25B81A82066BDBB00C3CB3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A25B81AA2066BDBB00C3CB3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A25B81AD2066BDBB00C3CB3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A25B81AF2066BDBB00C3CB3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A25B81B42066BDBB00C3CB3F /* EisenTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EisenTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B81B82066BDBB00C3CB3F /* EisenTodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EisenTodoTests.swift; sourceTree = "<group>"; };
 		A25B81BA2066BDBB00C3CB3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A25B81BF2066BDBB00C3CB3F /* EisenTodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EisenTodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B81C32066BDBB00C3CB3F /* EisenTodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EisenTodoUITests.swift; sourceTree = "<group>"; };
 		A25B81C52066BDBB00C3CB3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8290A2B262634D15966D73B /* Pods_EisenTodoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EisenTodoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF7C5CC2066C8BF00991F07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAF7C5D82066DB8700991F07 /* EisenTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EisenTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF7C5D92066DB8700991F07 /* EisenTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EisenTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF7C5DA2066DB8700991F07 /* EisenTodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EisenTodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF7C5E32066DE0500991F07 /* FacebookCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FacebookCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF7C5E42066DE0500991F07 /* FacebookLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FacebookLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF7C5E52066DE0500991F07 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF7C5E62066DE0500991F07 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF7C5E92072517200991F07 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF27BE62B0B5342B7BAB7E61 /* Pods_EisenTodo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C930207FEB27F56A0BD5B9 /* Pods_EisenTodoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,37 +90,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				429181A5CE7015C25A5948DC /* Pods_EisenTodoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35A9DB23A85C720F2E88A932 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAF7C5E32066DE0500991F07 /* FacebookCore.framework */,
+				FAF7C5E42066DE0500991F07 /* FacebookLogin.framework */,
+				FAF7C5E52066DE0500991F07 /* FBSDKCoreKit.framework */,
+				FAF7C5E62066DE0500991F07 /* FBSDKLoginKit.framework */,
+				673A7179F2E5A8BA83B31CAE /* Pods_EisenTodo.framework */,
+				B8290A2B262634D15966D73B /* Pods_EisenTodoTests.framework */,
+				3C8DF94C9E5D44173D208AF4 /* Pods_EisenTodoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A25B81972066BDBB00C3CB3F = {
 			isa = PBXGroup;
 			children = (
 				A25B81A22066BDBB00C3CB3F /* EisenTodo */,
 				A25B81B72066BDBB00C3CB3F /* EisenTodoTests */,
 				A25B81C22066BDBB00C3CB3F /* EisenTodoUITests */,
-				A25B81A12066BDBB00C3CB3F /* Products */,
+				CD6DFC6BE9505AF7BFBBB7E3 /* Pods */,
+				35A9DB23A85C720F2E88A932 /* Frameworks */,
+				FAF7C5D82066DB8700991F07 /* EisenTodo.app */,
+				FAF7C5D92066DB8700991F07 /* EisenTodoTests.xctest */,
+				FAF7C5DA2066DB8700991F07 /* EisenTodoUITests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		A25B81A12066BDBB00C3CB3F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A25B81A02066BDBB00C3CB3F /* EisenTodo.app */,
-				A25B81B42066BDBB00C3CB3F /* EisenTodoTests.xctest */,
-				A25B81BF2066BDBB00C3CB3F /* EisenTodoUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		A25B81A22066BDBB00C3CB3F /* EisenTodo */ = {
 			isa = PBXGroup;
 			children = (
+				FAF7C5E8207250AE00991F07 /* View */,
+				FAF7C5E72072507F00991F07 /* Controller */,
+				FAF7C5CC2066C8BF00991F07 /* GoogleService-Info.plist */,
 				A25B81A32066BDBB00C3CB3F /* AppDelegate.swift */,
-				A25B81A52066BDBB00C3CB3F /* ViewController.swift */,
 				A25B81A72066BDBB00C3CB3F /* Main.storyboard */,
 				A25B81AA2066BDBB00C3CB3F /* Assets.xcassets */,
 				A25B81AC2066BDBB00C3CB3F /* LaunchScreen.storyboard */,
@@ -125,6 +158,35 @@
 			path = EisenTodoUITests;
 			sourceTree = "<group>";
 		};
+		CD6DFC6BE9505AF7BFBBB7E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5576C14C8BA16EC78B553C2E /* Pods-EisenTodo.debug.xcconfig */,
+				3C4304DA75C17EB65953761C /* Pods-EisenTodo.release.xcconfig */,
+				27689022B4F792169E6B5CA1 /* Pods-EisenTodoTests.debug.xcconfig */,
+				A1ACEECD99D0F14E9334557B /* Pods-EisenTodoTests.release.xcconfig */,
+				673A65329354C81D978E50BD /* Pods-EisenTodoUITests.debug.xcconfig */,
+				81F483DDED75522251143E90 /* Pods-EisenTodoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAF7C5E72072507F00991F07 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A25B81A52066BDBB00C3CB3F /* LoginViewController.swift */,
+				FAF7C5E92072517200991F07 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAF7C5E8207250AE00991F07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25B81C82066BDBB00C3CB3F /* Build configuration list for PBXNativeTarget "EisenTodo" */;
 			buildPhases = (
+				C053985DAF2964C2D703517D /* [CP] Check Pods Manifest.lock */,
 				A25B819C2066BDBB00C3CB3F /* Sources */,
 				A25B819D2066BDBB00C3CB3F /* Frameworks */,
 				A25B819E2066BDBB00C3CB3F /* Resources */,
+				A4E1FB672379199D3A0EA1DF /* [CP] Embed Pods Frameworks */,
+				5622FF41F6C1E6BE7088A43D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,16 +207,19 @@
 			);
 			name = EisenTodo;
 			productName = EisenTodo;
-			productReference = A25B81A02066BDBB00C3CB3F /* EisenTodo.app */;
+			productReference = FAF7C5D82066DB8700991F07 /* EisenTodo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A25B81B32066BDBB00C3CB3F /* EisenTodoTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25B81CB2066BDBB00C3CB3F /* Build configuration list for PBXNativeTarget "EisenTodoTests" */;
 			buildPhases = (
+				5433C85167077A89F42A48BE /* [CP] Check Pods Manifest.lock */,
 				A25B81B02066BDBB00C3CB3F /* Sources */,
 				A25B81B12066BDBB00C3CB3F /* Frameworks */,
 				A25B81B22066BDBB00C3CB3F /* Resources */,
+				16B6B3AED8AF4C1B611116AA /* [CP] Embed Pods Frameworks */,
+				F38DD5244B4CCCB0A1360894 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,16 +228,19 @@
 			);
 			name = EisenTodoTests;
 			productName = EisenTodoTests;
-			productReference = A25B81B42066BDBB00C3CB3F /* EisenTodoTests.xctest */;
+			productReference = FAF7C5D92066DB8700991F07 /* EisenTodoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A25B81BE2066BDBB00C3CB3F /* EisenTodoUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25B81CE2066BDBB00C3CB3F /* Build configuration list for PBXNativeTarget "EisenTodoUITests" */;
 			buildPhases = (
+				B13B55BF18D46060D34C7C6B /* [CP] Check Pods Manifest.lock */,
 				A25B81BB2066BDBB00C3CB3F /* Sources */,
 				A25B81BC2066BDBB00C3CB3F /* Frameworks */,
 				A25B81BD2066BDBB00C3CB3F /* Resources */,
+				02FF4224433D6C7FDE8AE636 /* [CP] Embed Pods Frameworks */,
+				4F9FF9E315FC62EE6BF84B33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,7 +249,7 @@
 			);
 			name = EisenTodoUITests;
 			productName = EisenTodoUITests;
-			productReference = A25B81BF2066BDBB00C3CB3F /* EisenTodoUITests.xctest */;
+			productReference = FAF7C5DA2066DB8700991F07 /* EisenTodoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +287,7 @@
 				Base,
 			);
 			mainGroup = A25B81972066BDBB00C3CB3F;
-			productRefGroup = A25B81A12066BDBB00C3CB3F /* Products */;
+			productRefGroup = A25B81972066BDBB00C3CB3F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -233,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A25B81AE2066BDBB00C3CB3F /* LaunchScreen.storyboard in Resources */,
+				FAF7C5CD2066C8BF00991F07 /* GoogleService-Info.plist in Resources */,
 				A25B81AB2066BDBB00C3CB3F /* Assets.xcassets in Resources */,
 				A25B81A92066BDBB00C3CB3F /* Main.storyboard in Resources */,
 			);
@@ -254,12 +326,196 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02FF4224433D6C7FDE8AE636 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EisenTodoUITests/Pods-EisenTodoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16B6B3AED8AF4C1B611116AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EisenTodoTests/Pods-EisenTodoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F9FF9E315FC62EE6BF84B33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EisenTodoUITests/Pods-EisenTodoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5433C85167077A89F42A48BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EisenTodoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5622FF41F6C1E6BE7088A43D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EisenTodo/Pods-EisenTodo-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EisenTodo/Pods-EisenTodo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4E1FB672379199D3A0EA1DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EisenTodo/Pods-EisenTodo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EisenTodo/Pods-EisenTodo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B13B55BF18D46060D34C7C6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EisenTodoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C053985DAF2964C2D703517D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EisenTodo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F38DD5244B4CCCB0A1360894 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EisenTodoTests/Pods-EisenTodoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A25B819C2066BDBB00C3CB3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25B81A62066BDBB00C3CB3F /* ViewController.swift in Sources */,
+				FAF7C5EA2072517200991F07 /* MainViewController.swift in Sources */,
+				A25B81A62066BDBB00C3CB3F /* LoginViewController.swift in Sources */,
 				A25B81A42066BDBB00C3CB3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +680,7 @@
 		};
 		A25B81C92066BDBB00C3CB3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5576C14C8BA16EC78B553C2E /* Pods-EisenTodo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,6 +695,7 @@
 		};
 		A25B81CA2066BDBB00C3CB3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4304DA75C17EB65953761C /* Pods-EisenTodo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +710,7 @@
 		};
 		A25B81CC2066BDBB00C3CB3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27689022B4F792169E6B5CA1 /* Pods-EisenTodoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +727,7 @@
 		};
 		A25B81CD2066BDBB00C3CB3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1ACEECD99D0F14E9334557B /* Pods-EisenTodoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +744,7 @@
 		};
 		A25B81CF2066BDBB00C3CB3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 673A65329354C81D978E50BD /* Pods-EisenTodoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +760,7 @@
 		};
 		A25B81D02066BDBB00C3CB3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81F483DDED75522251143E90 /* Pods-EisenTodoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

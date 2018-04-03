@@ -12,7 +12,7 @@ import Firebase
 class TaskViewController: UIViewController {
 
     var documentID: String?
-    var documentData: [String: Any]
+    var documentData: [String: Any] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class TaskViewController: UIViewController {
                 },
                 "importance": 1,
                 "status": 0,
-                "dueDate": 2018-04-03 22:00:00 +0000
+                "dueDate": 0 // "2018-04-03 22:00:00 +0000"
             ]
         }
     }
@@ -43,7 +43,7 @@ class TaskViewController: UIViewController {
     func saveTask() {
         let db = Firestore.firestore()
 
-        db.collection("tasks").document(documentID).setData(documentData)
+//        db.collection("tasks").document(documentID).setData(documentData)
         
 //        if let documentID = documentID {
 //            

@@ -83,5 +83,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         alertController.addAction(okayAction)
         self.present(alertController, animated: true, completion: nil)
     }
-}
+    
+    // MARK: - Navigation
+    @IBAction func unwindToLogin(segue:UIStoryboardSegue) { }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 
+}

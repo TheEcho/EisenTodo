@@ -34,29 +34,27 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    // MARK: - Navigation
+    @IBAction func unwindToHome(segue:UIStoryboardSegue) { }
     
-    @IBAction func logout(sender: UIButton) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case "fromSignOut":
+            print ("Signing out...")
             
-            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginView") {
-                UIApplication.shared.keyWindow?.rootViewController = viewController
-                self.dismiss(animated: true, completion: nil)
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+                
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
             }
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+        default:
+            print ("Unknown segue identifier ", identifier)
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -18,6 +18,8 @@
 		A25B81C42066BDBB00C3CB3F /* EisenTodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B81C32066BDBB00C3CB3F /* EisenTodoUITests.swift */; };
 		FAF7C5CD2066C8BF00991F07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAF7C5CC2066C8BF00991F07 /* GoogleService-Info.plist */; };
 		FAF7C5EA2072517200991F07 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7C5E92072517200991F07 /* MainViewController.swift */; };
+		FAF7C5EC2073E50E00991F07 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7C5EB2073E50E00991F07 /* ProfileViewController.swift */; };
+		FAF7C5EE2073E53100991F07 /* TaskInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7C5ED2073E53100991F07 /* TaskInfoViewController.swift */; };
 		FF27BE62B0B5342B7BAB7E61 /* Pods_EisenTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673A7179F2E5A8BA83B31CAE /* Pods_EisenTodo.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		FAF7C5E52066DE0500991F07 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF7C5E62066DE0500991F07 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF7C5E92072517200991F07 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FAF7C5EB2073E50E00991F07 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FAF7C5ED2073E53100991F07 /* TaskInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,8 @@
 			children = (
 				A25B81A52066BDBB00C3CB3F /* LoginViewController.swift */,
 				FAF7C5E92072517200991F07 /* MainViewController.swift */,
+				FAF7C5EB2073E50E00991F07 /* ProfileViewController.swift */,
+				FAF7C5ED2073E53100991F07 /* TaskInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -515,7 +521,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF7C5EA2072517200991F07 /* MainViewController.swift in Sources */,
+				FAF7C5EE2073E53100991F07 /* TaskInfoViewController.swift in Sources */,
 				A25B81A62066BDBB00C3CB3F /* LoginViewController.swift in Sources */,
+				FAF7C5EC2073E50E00991F07 /* ProfileViewController.swift in Sources */,
 				A25B81A42066BDBB00C3CB3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,6 @@ import Firebase
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var usernameLabel: UILabel!
     var authStateHandle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
@@ -19,11 +18,8 @@ class MainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         authStateHandle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            if let name = user?.displayName {
-                self.usernameLabel.text = "Hello \(name)"
-            }
+
         }
-        
     }
 
     override func viewWillDisappear(_ animated: Bool) {

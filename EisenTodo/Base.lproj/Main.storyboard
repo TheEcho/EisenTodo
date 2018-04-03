@@ -54,13 +54,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zh-jD-5ah" userLabel="usernameLabel">
-                                <rect key="frame" x="137" y="626" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJa-n0-oVD">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -117,9 +110,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YuR-mE-XfB"/>
                     </view>
-                    <connections>
-                        <outlet property="usernameLabel" destination="3Zh-jD-5ah" id="vNi-Fp-Ohk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eO-ep-axa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8dZ-Ym-fny" userLabel="Exit" sceneMemberID="exit"/>
@@ -174,7 +164,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="BRa-4q-sbj">
+                                    <navigationItem title="Your Profile" id="BRa-4q-sbj">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="p4b-6c-kJA">
                                             <connections>
                                                 <segue destination="q0p-ph-dkG" kind="unwind" identifier="fromBack" unwindAction="unwindToHomeWithSegue:" id="NOJ-5s-fRP"/>
@@ -183,15 +173,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DTm-IY-UCb" userLabel="profilePhoto">
+                                <rect key="frame" x="87" y="118" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNj-Yu-YiD" userLabel="profileUsername">
+                                <rect key="frame" x="16" y="349" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLR-Yy-YKq" userLabel="profileEmail">
+                                <rect key="frame" x="16" y="393" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bg6-fL-9AK"/>
                     </view>
+                    <connections>
+                        <outlet property="profileEmail" destination="mLR-Yy-YKq" id="kVi-Vr-9RD"/>
+                        <outlet property="profilePhoto" destination="DTm-IY-UCb" id="3ci-5y-eVI"/>
+                        <outlet property="profileUsername" destination="CNj-Yu-YiD" id="2kC-yL-D9c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qq3-ng-x72" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="q0p-ph-dkG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="-340"/>
+            <point key="canvasLocation" x="1568.8" y="-340.47976011994007"/>
         </scene>
     </scenes>
     <resources>

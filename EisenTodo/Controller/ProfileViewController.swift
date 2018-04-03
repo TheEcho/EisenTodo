@@ -7,13 +7,31 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
+
+    
+    @IBOutlet weak var profileUsername: UILabel!
+    @IBOutlet weak var profileEmail: UILabel!
+    @IBOutlet weak var profilePhoto: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let user = Auth.auth().currentUser
+        
+        if let user = user {
+            self.profileEmail.text = user.email
+            self.profileUsername.text = user.displayName
+            
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: user.photoURL!)
+                DispatchQueue.main.async {
+                    self.profilePhoto.image = UIImage(data: data!)
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

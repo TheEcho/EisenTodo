@@ -41,14 +41,16 @@ class MainViewController: UIViewController {
         if let user = user {
             let db = Firestore.firestore()
             
+            print("Retrieving user document with firebase uid \(user.uid)...")
+            
             db.collection("users").whereField("uid", isEqualTo: user.uid)
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
                     } else if querySnapshot!.documents.count > 1 {
-                        print("Error: multiple documents with same uid")
+                        print("Error: multiple documents with same firebase uid")
                     } else if querySnapshot!.documents.count < 1 {
-                        print("No document with this uid. Creating one...")
+                        print("No document with this firebase uid. Creating one...")
                         self.createUserData(user: user)
                     } else {
                         let document = querySnapshot!.documents.first!
@@ -93,6 +95,7 @@ class MainViewController: UIViewController {
                             print("\(document.documentID) => \(document.data())")
                             // Display tasks ...
                         }
+                        print("Done with \(querySnapshot!.documents.count) document(s).")
                     }
             }
         }

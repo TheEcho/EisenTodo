@@ -66,7 +66,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Profile" id="XFd-T2-kAh">
                                             <connections>
-                                                <segue destination="h5E-wL-eON" kind="showDetail" action="showViewController:sender:" id="kzz-Df-kfk"/>
+                                                <segue destination="h5E-wL-eON" kind="showDetail" identifier="toProfileView" action="showViewController:sender:" id="kzz-Df-kfk"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -97,9 +97,6 @@
                                                         <accessibilityTraits key="traits" button="YES" image="YES"/>
                                                     </accessibility>
                                                     <state key="normal" title="fefsf" backgroundImage="google.png"/>
-                                                    <connections>
-                                                        <segue destination="yNe-DI-WWb" kind="presentation" id="fIV-Ba-iBo"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -110,16 +107,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YuR-mE-XfB"/>
                     </view>
+                    <connections>
+                        <segue destination="yNe-DI-WWb" kind="presentation" identifier="toTaskView" id="PxT-09-EAk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eO-ep-axa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8dZ-Ym-fny" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="757.60000000000002" y="31.934032983508249"/>
         </scene>
-        <!--Task Info View Controller-->
+        <!--Task View Controller-->
         <scene sceneID="vHB-7v-ahf">
             <objects>
-                <viewController id="yNe-DI-WWb" customClass="TaskInfoViewController" customModule="EisenTodo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yNe-DI-WWb" customClass="TaskViewController" customModule="EisenTodo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TU5-y7-WE3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

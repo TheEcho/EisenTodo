@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,12 +80,12 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Create Task"/>
                                 <connections>
-                                    <segue destination="yNe-DI-WWb" kind="show" id="y4v-wU-iP6"/>
+                                    <segue destination="yNe-DI-WWb" kind="show" identifier="toTaskView" id="y4v-wU-iP6"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A2i-LZ-7Zc">
                                 <rect key="frame" x="16" y="131" width="343" height="516"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DAJ-E5-pKb">
                                     <size key="itemSize" width="160" height="159"/>
@@ -134,7 +134,6 @@
                     </view>
                     <connections>
                         <outlet property="CollectionView" destination="A2i-LZ-7Zc" id="Vcb-nJ-L7i"/>
-                        <segue destination="yNe-DI-WWb" kind="presentation" identifier="toTaskView" id="PxT-09-EAk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eO-ep-axa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -290,7 +289,4 @@
             <point key="canvasLocation" x="1568.8" y="-340.47976011994007"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="PxT-09-EAk"/>
-    </inferredMetricsTieBreakers>
 </document>

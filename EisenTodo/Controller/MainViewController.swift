@@ -16,6 +16,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     var authStateHandle: AuthStateDidChangeListenerHandle?
     var userId: String?
     var tasks: [[String: Any]] = []
+    var tasksID: [String] = []
+    var clickedTaskItem: Int = 0
 
     @IBOutlet weak var CollectionView: UICollectionView!
     
@@ -122,9 +124,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                     if let err = err {
                         print("Error getting documents: \(err)")
                     } else {
+                        self.tasks = []
+                        self.tasksID = []
+
                         for document in querySnapshot!.documents {
                             print("\(document.documentID) => \(document.data())")
                             self.tasks.append(document.data())
+                            self.tasksID.append(document.documentID)
                         }
                         print("Done with \(querySnapshot!.documents.count) document(s).")
                         self.CollectionView.reloadData()
@@ -159,7 +165,13 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selected : ", indexPath)
 
+        self.clickedTaskItem = indexPath.item
+        performSegue(withIdentifier: "toTaskView", sender: self)
+    }
     
     // MARK: - Navigation
     @IBAction func unwindToHome(segue:UIStoryboardSegue) { }
@@ -177,6 +189,11 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
                 
             } catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
+            }
+        case "toTaskView":
+            if let destVC = segue.destination as? TaskViewController {
+                destVC.documentID = self.tasksID[self.clickedTaskItem]
+                destVC.documentData = self.tasks[self.clickedTaskItem]
             }
         default:
             print ("Unknown segue identifier ", identifier)

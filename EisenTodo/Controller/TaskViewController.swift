@@ -175,15 +175,12 @@ class TaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         switch identifier {
         case "fromCancel":
             print ("Cancel changes...")
-            self.reset()
         case "fromSave":
             print ("Saving task...")
             self.saveTask()
-            self.reset()
         case "fromDelete":
             print ("Deleting task...")
             self.deleteTask()
-            self.reset()
         default:
             print ("Unknown segue identifier ", identifier)
         }

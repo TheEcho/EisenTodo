@@ -170,7 +170,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         print("selected : ", indexPath)
 
         self.clickedTaskItem = indexPath.item
-        performSegue(withIdentifier: "toTaskView", sender: self)
+        performSegue(withIdentifier: "toEditTaskView", sender: self)
     }
     
     // MARK: - Navigation
@@ -190,7 +190,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             } catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
             }
-        case "toTaskView":
+        case "toEditTaskView":
             if let destVC = segue.destination as? TaskViewController {
                 destVC.documentID = self.tasksID[self.clickedTaskItem]
                 destVC.documentData = self.tasks[self.clickedTaskItem]

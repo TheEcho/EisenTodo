@@ -10,5 +10,5 @@ To install and open the project do the following commands :
 Then open the project in xcode via the `EisenTodo.xcworkspace` file
 
 ## Contributors
-Alexandre PELE
-Marvin CATOIS
+* Alexandre PELE (alexandre.pele@epitech.eu)
+* Marvin CATOIS (marvin.catois@epitech.eu)

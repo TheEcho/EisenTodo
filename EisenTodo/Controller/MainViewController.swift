@@ -151,7 +151,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             myFormatter.dateStyle = .medium
             let date = myFormatter.string(from: self.tasks[indexPath.item]["dueDate"] as! Date)
 
-            cell.name.text = self.tasks[indexPath.item]["title"] as! String
+            cell.name.text = (self.tasks[indexPath.item]["title"] as! String)
             cell.date.text = date
             if (self.tasks[indexPath.item]["importance"] as! Int == 3) {
                 cell.backgroundColor = hexStringToUIColor(hex: "#D55F3F")

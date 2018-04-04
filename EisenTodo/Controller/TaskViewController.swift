@@ -42,11 +42,19 @@ class TaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var taskDueDate: UIDatePicker!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var userPicker: UIPickerView!
+    @IBOutlet weak var taskImportancePicker: UIPickerView!
     @IBOutlet weak var userDisplay: UIStackView!
     
     var documentID: String?
     var documentData: [String: Any] = [:]
     var users: [[String: Any]] = []
+    
+    let importanceLabels = [
+        "Regular",
+        "Schedule",
+        "Delegate",
+        "Do First"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +66,7 @@ class TaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                 "title": "Task Title",
                 "description": "Description",
                 "users": [:],
-                "importance": 1,
+                "importance": 0,
                 "status": 0,
                 "dueDate": Date().tomorrow
             ]
@@ -67,6 +75,9 @@ class TaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         
         self.userPicker.dataSource = self
         self.userPicker.delegate = self
+
+        self.taskImportancePicker.dataSource = self
+        self.taskImportancePicker.delegate = self
 
         let db = Firestore.firestore()
 
@@ -82,7 +93,6 @@ class TaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             }
         }
         
-        
         self.documentToDisplay()
     }
 
@@ -97,12 +107,14 @@ class TaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         self.taskTitle.text = self.documentData["title"] as! String
         self.taskDescription.text = self.documentData["description"] as! String
         self.taskDueDate.date = self.documentData["dueDate"] as! Date
+        self.taskImportancePicker.selectRow(self.documentData["importance"] as! Int, inComponent: 0, animated: false)
     }
 
     func displayToDocument() {
         self.documentData["title"] = self.taskTitle.text
         self.documentData["description"] = self.taskDescription.text
         self.documentData["dueDate"] = self.taskDueDate.date
+        self.documentData["importance"] = self.taskImportancePicker.selectedRow(inComponent: 0)
     }
     
     func saveTask() {
@@ -195,13 +207,27 @@ class TaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     func pickerView(_ pickerView: UIPickerView,
                     numberOfRowsInComponent component: Int) -> Int {
         // Row count: rows equals array length.
-        return users.count
+        switch pickerView {
+            case self.userPicker:
+                return users.count
+            case self.taskImportancePicker:
+                return self.importanceLabels.count
+            default:
+                return -1
+        }
     }
-    
+
     func pickerView(_ pickerView: UIPickerView,
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
         // Return a string from the array for this row.
-        return users[row]["displayName"] as! String
+        switch pickerView {
+            case self.userPicker:
+                return (users[row]["displayName"] as! String)
+            case self.taskImportancePicker:
+                return self.importanceLabels[row]
+            default:
+                return ""
+        }
     }
 }

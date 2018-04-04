@@ -23,7 +23,9 @@ class TaskViewController: UIViewController {
     @IBOutlet weak var taskTitle: UITextView!
     @IBOutlet weak var taskDescription: UITextView!
     @IBOutlet weak var taskDueDate: UIDatePicker!
-
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var userPicker: UIPickerView!
+    
     var documentID: String?
     var documentData: [String: Any] = [:]
 
@@ -41,7 +43,23 @@ class TaskViewController: UIViewController {
                 "status": 0,
                 "dueDate": Date().tomorrow
             ]
+            self.deleteButton.isHidden = true
         }
+        let db = Firestore.firestore()
+
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+//                self.userPicker.dataSource
+//                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//
+//                }
+            }
+        }
+        
+        
         self.documentToDisplay()
     }
 
@@ -56,6 +74,7 @@ class TaskViewController: UIViewController {
         self.taskTitle.text = self.documentData["title"] as! String
         self.taskDescription.text = self.documentData["description"] as! String
         self.taskDueDate.date = self.documentData["dueDate"] as! Date
+        self.displayTaskUsers()
     }
 
     func displayToDocument() {
@@ -82,6 +101,24 @@ class TaskViewController: UIViewController {
         }
     }
 
+    func deleteTask() {
+        let db = Firestore.firestore()
+
+        db.collection("tasks").document(documentID!).delete()
+    }
+    
+    @IBAction func addUserToTask() {
+        var userList = documentData["users"] as! [String: Bool]
+        
+        // userList[user.uid] = true
+        documentData["users"] = userList
+    }
+    
+    func displayTaskUsers() {
+        var userList = documentData["users"] as! [String: Bool]
+
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
@@ -90,8 +127,11 @@ class TaskViewController: UIViewController {
         case "fromCancel":
             print ("Cancel changes...")
         case "fromSave":
-            self.saveTask()
             print ("Saving task...")
+            self.saveTask()
+        case "fromDelete":
+            print ("Deleting task...")
+            self.deleteTask()
         default:
             print ("Unknown segue identifier ", identifier)
         }

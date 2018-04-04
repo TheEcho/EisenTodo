@@ -26,11 +26,14 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         authStateHandle = Auth.auth().addStateDidChangeListener { (auth, user) in
 
         }
-        fetchData()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         Auth.auth().removeStateDidChangeListener(authStateHandle!)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        fetchData()
     }
     
     override func didReceiveMemoryWarning() {

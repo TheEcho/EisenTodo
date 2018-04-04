@@ -18,16 +18,35 @@ extension Date {
     }
 }
 
-class TaskViewController: UIViewController {
+extension UIStackView {
+    
+    func removeAllArrangedSubviews() {
+        
+        let removedSubviews = arrangedSubviews.reduce([]) { (allSubviews, subview) -> [UIView] in
+            self.removeArrangedSubview(subview)
+            return allSubviews + [subview]
+        }
+        
+        // Deactivate all constraints
+        NSLayoutConstraint.deactivate(removedSubviews.flatMap({ $0.constraints }))
+        
+        // Remove the views from self
+        removedSubviews.forEach({ $0.removeFromSuperview() })
+    }
+}
 
+class TaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     @IBOutlet weak var taskTitle: UITextView!
     @IBOutlet weak var taskDescription: UITextView!
     @IBOutlet weak var taskDueDate: UIDatePicker!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var userPicker: UIPickerView!
+    @IBOutlet weak var userDisplay: UIStackView!
     
     var documentID: String?
     var documentData: [String: Any] = [:]
+    var users: [[String: Any]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,17 +64,21 @@ class TaskViewController: UIViewController {
             ]
             self.deleteButton.isHidden = true
         }
+        
+        self.userPicker.dataSource = self
+        self.userPicker.delegate = self
+
         let db = Firestore.firestore()
 
         db.collection("users").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-//                self.userPicker.dataSource
-//                for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
-//
-//                }
+                for document in querySnapshot!.documents {
+                    self.users.append(document.data())
+                }
+                self.userPicker.reloadAllComponents()
+                self.displayTaskUsers()
             }
         }
         
@@ -74,7 +97,6 @@ class TaskViewController: UIViewController {
         self.taskTitle.text = self.documentData["title"] as! String
         self.taskDescription.text = self.documentData["description"] as! String
         self.taskDueDate.date = self.documentData["dueDate"] as! Date
-        self.displayTaskUsers()
     }
 
     func displayToDocument() {
@@ -108,15 +130,36 @@ class TaskViewController: UIViewController {
     }
     
     @IBAction func addUserToTask() {
-        var userList = documentData["users"] as! [String: Bool]
+        var usersList = documentData["users"] as! [String: Bool]
         
-        // userList[user.uid] = true
-        documentData["users"] = userList
+        usersList[self.users[self.userPicker.selectedRow(inComponent: 0)]["uid"] as! String] = true
+        documentData["users"] = usersList
+        self.displayTaskUsers()
     }
     
     func displayTaskUsers() {
-        var userList = documentData["users"] as! [String: Bool]
-
+        let usersList = documentData["users"] as! [String: Bool]
+        
+        self.userDisplay.removeAllArrangedSubviews()
+        
+        for user in usersList {
+            DispatchQueue.global().async {
+                let userdata = self.users.first(where: { (item) -> Bool in
+                    item["uid"] as! String == user.key
+                })!
+                let photoUrl = userdata["photoUrl"] as? String
+                
+                if photoUrl != nil && !photoUrl!.isEmpty {
+                    let data = try? Data(contentsOf: URL(string: photoUrl!)!)
+                    DispatchQueue.main.async {
+                        let userPic = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+                        
+                        userPic.image = UIImage(data: data!)
+                        self.userDisplay.addArrangedSubview(userPic)
+                    }
+                }
+            }
+        }
     }
     
     // MARK: - Navigation
@@ -135,5 +178,24 @@ class TaskViewController: UIViewController {
         default:
             print ("Unknown segue identifier ", identifier)
         }
+    }
+    
+    // MARK: UIPickerView
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        // Column count: use one column.
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView,
+                    numberOfRowsInComponent component: Int) -> Int {
+        // Row count: rows equals array length.
+        return users.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView,
+                    titleForRow row: Int,
+                    forComponent component: Int) -> String? {
+        // Return a string from the array for this row.
+        return users[row]["displayName"] as! String
     }
 }

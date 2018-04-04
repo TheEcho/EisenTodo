@@ -203,7 +203,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yf4-l5-G2P">
                                 <rect key="frame" x="295" y="242" width="64" height="74"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add User"/>
                                 <connections>
                                     <action selector="addUserToTask" destination="yNe-DI-WWb" eventType="touchUpInside" id="Ts6-xw-K7w"/>
@@ -211,9 +211,9 @@
                             </button>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lVe-eq-L8Z">
                                 <rect key="frame" x="16" y="242" width="271" height="74"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXo-fv-Ka2">
+                            <stackView opaque="NO" contentMode="left" fixedFrame="YES" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BXo-fv-Ka2">
                                 <rect key="frame" x="16" y="174" width="343" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </stackView>
@@ -226,6 +226,7 @@
                         <outlet property="taskDescription" destination="kcb-kR-fjw" id="Z8L-ZW-2Sb"/>
                         <outlet property="taskDueDate" destination="FMj-47-nmc" id="Sfd-f5-bzh"/>
                         <outlet property="taskTitle" destination="7lL-Sp-laf" id="o7t-9v-aEW"/>
+                        <outlet property="userDisplay" destination="BXo-fv-Ka2" id="v5Z-DU-Ygb"/>
                         <outlet property="userPicker" destination="lVe-eq-L8Z" id="6OS-EN-tOg"/>
                     </connections>
                 </viewController>

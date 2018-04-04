@@ -145,20 +145,12 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.date.text = date
             if (self.tasks[indexPath.item]["importance"] as! Int == 1 && self.tasks[indexPath.item]["status"] as! Int == 1) {
                 cell.backgroundColor = hexStringToUIColor(hex: "#D55F3F")
-                cell.importantImg.isHidden = false
-                cell.urgentImg.isHidden = false
             } else if (self.tasks[indexPath.item]["importance"] as! Int == 0 && self.tasks[indexPath.item]["status"] as! Int == 1) {
                 cell.backgroundColor = hexStringToUIColor(hex: "#91CE5B")
-                cell.importantImg.isHidden = true
-                cell.urgentImg.isHidden = false
             } else if (self.tasks[indexPath.item]["importance"] as! Int == 1 && self.tasks[indexPath.item]["status"] as! Int == 0) {
                 cell.backgroundColor = hexStringToUIColor(hex: "#51A6B7")
-                cell.importantImg.isHidden = false
-                cell.urgentImg.isHidden = true
             } else if (self.tasks[indexPath.item]["importance"] as! Int == 0 && self.tasks[indexPath.item]["status"] as! Int == 0) {
                 cell.backgroundColor = hexStringToUIColor(hex: "#B7D496")
-                cell.importantImg.isHidden = true
-                cell.urgentImg.isHidden = true
             }
         }
         return cell

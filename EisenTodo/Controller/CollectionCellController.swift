@@ -11,6 +11,4 @@ import UIKit
 class CollectionCellController: UICollectionViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var importantImg: UIImageView!
-    @IBOutlet weak var urgentImg: UIImageView!
 }

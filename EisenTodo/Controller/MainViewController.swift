@@ -9,10 +9,15 @@
 import UIKit
 import Firebase
 
-class MainViewController: UIViewController {
+private let reuseIdentifier = "Cell"
+
+class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     var authStateHandle: AuthStateDidChangeListenerHandle?
     var userId: String?
+    var tasks: [[String: Any]] = []
+
+    @IBOutlet weak var CollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +39,28 @@ class MainViewController: UIViewController {
     }
 
     // MARK: - Data Handling (note: firebase uid is unique)
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
     
     func fetchData() {
         let user = Auth.auth().currentUser
@@ -93,13 +120,50 @@ class MainViewController: UIViewController {
                     } else {
                         for document in querySnapshot!.documents {
                             print("\(document.documentID) => \(document.data())")
-                            // Display tasks ...
+                            self.tasks.append(document.data())
                         }
                         print("Done with \(querySnapshot!.documents.count) document(s).")
+                        self.CollectionView.reloadData()
                     }
             }
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.tasks.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionCellController
+        if (self.tasks.count > 0) {
+            let myFormatter = DateFormatter()
+
+            myFormatter.dateStyle = .medium
+            let date = myFormatter.string(from: self.tasks[indexPath.item]["dueDate"] as! Date)
+
+            cell.name.text = self.tasks[indexPath.item]["title"] as! String
+            cell.date.text = date
+            if (self.tasks[indexPath.item]["importance"] as! Int == 1 && self.tasks[indexPath.item]["status"] as! Int == 1) {
+                cell.backgroundColor = hexStringToUIColor(hex: "#D55F3F")
+                cell.importantImg.isHidden = false
+                cell.urgentImg.isHidden = false
+            } else if (self.tasks[indexPath.item]["importance"] as! Int == 0 && self.tasks[indexPath.item]["status"] as! Int == 1) {
+                cell.backgroundColor = hexStringToUIColor(hex: "#91CE5B")
+                cell.importantImg.isHidden = true
+                cell.urgentImg.isHidden = false
+            } else if (self.tasks[indexPath.item]["importance"] as! Int == 1 && self.tasks[indexPath.item]["status"] as! Int == 0) {
+                cell.backgroundColor = hexStringToUIColor(hex: "#51A6B7")
+                cell.importantImg.isHidden = false
+                cell.urgentImg.isHidden = true
+            } else if (self.tasks[indexPath.item]["importance"] as! Int == 0 && self.tasks[indexPath.item]["status"] as! Int == 0) {
+                cell.backgroundColor = hexStringToUIColor(hex: "#B7D496")
+                cell.importantImg.isHidden = true
+                cell.urgentImg.isHidden = true
+            }
+        }
+        return cell
+    }
+
     
     // MARK: - Navigation
     @IBAction func unwindToHome(segue:UIStoryboardSegue) { }

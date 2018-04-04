@@ -115,21 +115,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google.png" translatesAutoresizingMaskIntoConstraints="NO" id="Iq9-Gp-eMJ">
-                                                    <rect key="frame" x="117" y="31" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google.png" translatesAutoresizingMaskIntoConstraints="NO" id="6t9-5w-GX9">
-                                                    <rect key="frame" x="118" y="90" width="30" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                         </view>
                                         <connections>
                                             <outlet property="date" destination="p7B-vW-y3k" id="UTl-mg-9pc"/>
-                                            <outlet property="importantImg" destination="Iq9-Gp-eMJ" id="Rqm-DF-OXE"/>
                                             <outlet property="name" destination="EJm-h2-pdS" id="Ro9-ue-bvA"/>
-                                            <outlet property="urgentImg" destination="6t9-5w-GX9" id="9hx-6L-8Pk"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -299,9 +289,6 @@
             <point key="canvasLocation" x="1568.8" y="-340.47976011994007"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="google.png" width="18" height="18"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PxT-09-EAk"/>
     </inferredMetricsTieBreakers>

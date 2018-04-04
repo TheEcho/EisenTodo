@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		429181A5CE7015C25A5948DC /* Pods_EisenTodoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8DF94C9E5D44173D208AF4 /* Pods_EisenTodoUITests.framework */; };
 		57C930207FEB27F56A0BD5B9 /* Pods_EisenTodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8290A2B262634D15966D73B /* Pods_EisenTodoTests.framework */; };
-		5FBB0E722075869A00C6DB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB0E712075869A00C6DB09 /* Assets.xcassets */; };
 		5FFB6DA3207571A2000E8C0A /* CollectionCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB6DA2207571A2000E8C0A /* CollectionCellController.swift */; };
 		A25B81A42066BDBB00C3CB3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B81A32066BDBB00C3CB3F /* AppDelegate.swift */; };
 		A25B81A62066BDBB00C3CB3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B81A52066BDBB00C3CB3F /* LoginViewController.swift */; };
@@ -46,7 +45,6 @@
 		3C4304DA75C17EB65953761C /* Pods-EisenTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EisenTodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EisenTodo/Pods-EisenTodo.release.xcconfig"; sourceTree = "<group>"; };
 		3C8DF94C9E5D44173D208AF4 /* Pods_EisenTodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EisenTodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5576C14C8BA16EC78B553C2E /* Pods-EisenTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EisenTodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EisenTodo/Pods-EisenTodo.debug.xcconfig"; sourceTree = "<group>"; };
-		5FBB0E712075869A00C6DB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FFB6DA2207571A2000E8C0A /* CollectionCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellController.swift; sourceTree = "<group>"; };
 		673A65329354C81D978E50BD /* Pods-EisenTodoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EisenTodoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EisenTodoUITests/Pods-EisenTodoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		673A7179F2E5A8BA83B31CAE /* Pods_EisenTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EisenTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,7 +138,6 @@
 				A25B81A72066BDBB00C3CB3F /* Main.storyboard */,
 				A25B81AC2066BDBB00C3CB3F /* LaunchScreen.storyboard */,
 				A25B81AF2066BDBB00C3CB3F /* Info.plist */,
-				5FBB0E712075869A00C6DB09 /* Assets.xcassets */,
 			);
 			path = EisenTodo;
 			sourceTree = "<group>";
@@ -306,7 +303,6 @@
 			files = (
 				A25B81AE2066BDBB00C3CB3F /* LaunchScreen.storyboard in Resources */,
 				FAF7C5CD2066C8BF00991F07 /* GoogleService-Info.plist in Resources */,
-				5FBB0E722075869A00C6DB09 /* Assets.xcassets in Resources */,
 				A25B81A92066BDBB00C3CB3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

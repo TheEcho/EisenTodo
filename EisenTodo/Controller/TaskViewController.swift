@@ -162,6 +162,12 @@ class TaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         }
     }
     
+    func reset() {
+        self.documentID = nil
+        self.documentData = [:]
+        self.users = []
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
@@ -169,12 +175,15 @@ class TaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         switch identifier {
         case "fromCancel":
             print ("Cancel changes...")
+            self.reset()
         case "fromSave":
             print ("Saving task...")
             self.saveTask()
+            self.reset()
         case "fromDelete":
             print ("Deleting task...")
             self.deleteTask()
+            self.reset()
         default:
             print ("Unknown segue identifier ", identifier)
         }

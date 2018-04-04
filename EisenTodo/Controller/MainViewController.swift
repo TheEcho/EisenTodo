@@ -26,6 +26,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         authStateHandle = Auth.auth().addStateDidChangeListener { (auth, user) in
 
         }
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
